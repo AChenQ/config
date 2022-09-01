@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/zhen.chen/Desktop/demo/zhuan/bosch/line/tmp2/demo2/output'
+let g:netrw_dirhist_3='/Users/zhen.chen/zhen_code/graviti-python-sdk/graviti/utility'
+let g:netrw_dirhist_2='/Users/zhen.chen/zhen_code/graviti-python-sdk/graviti/portex'
+let g:netrw_dirhist_1='/Users/zhen.chen/Desktop/demo/zhuishi/data/label'
+let g:netrw_dirhist_0='/Users/zhen.chen/Desktop/demo/zhuan/bosch/l-shape/result'
+let g:netrw_dirhist_9='/Users/zhen.chen/Desktop/demo/zhuan/l-shape'
+let g:netrw_dirhist_8='/Users/zhen.chen/zhen_code/graviti-python-sdk/graviti/dataframe'
+let g:netrw_dirhist_7='/Users/zhen.chen/zhen_code/graviti-python-sdk/graviti/dataset'
+let g:netrw_dirhist_6='/Users/zhen.chen/Desktop/demo/shuling/fusion/order_20220306/SHX-biaozhu/SHXsample_data/Calibration'
+let g:netrw_dirhist_5='/Users/zhen.chen/zhen_code/graviti-python-sdk/graviti/dataframe'

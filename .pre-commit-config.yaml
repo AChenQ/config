@@ -1,0 +1,30 @@
+#
+# Copyright 2021 Graviti. Licensed under MIT License.
+#
+
+---
+default_stages: [commit]
+default_language_version:
+  python: python3.8
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: detect-private-key
+
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.9.3
+    hooks:
+      - id: isort
+        types: [python]
+        exclude: "^examples"
+        args: ["--profile=black", "-w 100"]
+      - id: isort
+        name: isort-examples
+        types: [python]
+        files: "^examples"
+        args: ["--profile=black", "-w 100", "--thirdparty=tensorbay"]
+
+
