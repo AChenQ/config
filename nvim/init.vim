@@ -132,13 +132,16 @@ Plug 'tpope/vim-surround'
 Plug 'sickill/vim-monokai'
 call plug#end()
 
+syntax enable
+colorscheme monokai
+
 " formatting by symboDCommenterComment
 nnoremap <leader>ta :Tabularize /
 xnoremap <leader>ta :Tabularize /
 
 " airline config
 let g:airline_powerline_fonts = 1
-let g:airline_theme='wombat'
+let g:airline_theme='dark'
 "let g:airline_left_sep='<'
 let g:airline#extensions#tabline#enabled = 1
 
@@ -232,10 +235,6 @@ let g:coc_global_extensions = [
 " Use <c-space> to trigger completion.
 "inoremap <silent><expr> <c-space> coc#refresh()
 
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> coc#pum#visible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
@@ -262,6 +261,12 @@ inorem <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1):
       \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+" inoremap <expr> <cr> coc#pum#visible() ? "\<C-y>" : "\<C-g>u\<CR>\"
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() :
+                                           \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " popup tracslator "
 nmap <leader>t <Plug>(coc-translator-p)
