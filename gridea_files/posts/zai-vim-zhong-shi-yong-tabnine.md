@@ -1,6 +1,6 @@
 ---
 title: '在vim中使用TabNine'
-date: 2022-09-01 17:03:05
+date: 2022-09-02 17:03:05
 tags: [vim]
 published: true
 hideInList: false
@@ -15,7 +15,7 @@ isTop: false
 * 使用Plugin管理
 * 使用coc管理
 
-#### 使用Plugin
+## 使用Plugin
 原项目地址: [tabnine-vim](https://github.com/codota/tabnine-vim)
 
 使用步骤:
@@ -31,7 +31,7 @@ isTop: false
 比如coc-word将不会自动帮你补全英文单词
 所以我采用的是coc进行管理
 
-#### 使用coc
+## 使用coc
 原项目地址: [coc-tabnine](https://github.com/neoclide/coc-tabnine)
 
 使用步骤:
