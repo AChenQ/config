@@ -76,9 +76,18 @@ Remove-Item alias:\ls
 ```
 
 ## 软链接
+文件
 ```
 New-Item -ItemType SymbolicLink -Path C:\Users\hjjge\AppData\Local\nvim\init.vim -Target init.vim
 ```
+文件夹软链接
+
+管理员运行cmd, 注意只有cmd才有mklink这个命令
+在D盘下生成一个指向E盘文件夹example的软连接link文件夹
+```
+mklink /d D:\link E:\example
+```
+
 
 ## 包管理
 可以使用chocolatey进行安装， 先安装`ChocolateyGet`
