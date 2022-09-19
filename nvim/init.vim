@@ -176,14 +176,18 @@ let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 let g:autoformat_verbosemode = 0
-let g:formatdef_black_isort = "'isort --profile=black --thirdparty=tensorbay -w 100 -| black -l 100 -'"
+let g:formatdef_black_isort = "'isort --profile=black -w 100 -| black -l 100 -'"
 let g:formatters_python = ['black_isort']
 
 let g:formatters_xml = ['prettydiff']
 let g:formatdef_prettydiff = "'~/.vim/prettydiff.sh beautify ".
             \                "warp:100 indent_size:4 preserve:2 space_close:true'"
 
-let g:ale_python_flake8_options = '--max-line-length=100 --ignore=E203,W503,D105,D107,DAR203'
+"normal
+"let g:ale_python_flake8_options = '--max-line-length=100 --ignore=E203,W503,D105,D107,DAR203'
+
+"for rpa
+let g:ale_python_flake8_options = '--max-line-length=400 --ignore=E203,W503,D105,D107,DAR203,E251,E722'
 
 let g:ale_python_pylint_options = join([
             \   '--good-names=i,j,k,x,y,z,w,fp,n',
@@ -211,6 +215,9 @@ let g:ale_sign_info = '?'
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_info_str = 'I'
+
+nmap <silent> ak <Plug>(ale_previous_wrap)
+nmap <silent> aj <Plug>(ale_next_wrap)
 
 " 设置使用markdown插件的类型以及不自动折叠代码
 let g:vim_markdown_folding_disabled=1
@@ -256,7 +263,6 @@ xmap <silent> <TAB> <Plug>(coc-range-select)
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 
 " Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inorem <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1):
       \ coc#refresh()

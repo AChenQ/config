@@ -41,3 +41,19 @@ git branch -m dev devlope
 git push origin develop
 git push origin --delete develop
 ```
+
+## git commit --amend取消
+如果只amend了一次，则直接reset即可
+```
+git reset HEAD~1
+```
+如果amend了多次，则先使用relog查看需要撤销多少次操作，再使用reset撤销
+```
+git reflog
+git reset HEAD~2
+```
+默认是soft模式，即把修改返回到暂存区
+也可以使用hard，直接丢弃修改代码
+```
+git reset --hard HEAD~1
+```
