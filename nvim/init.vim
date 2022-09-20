@@ -308,10 +308,18 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " autoformat json file
-nnoremap <leader>jq :%!jq -M -r --indent 4<CR>
+nnoremap <leader>jq :exec PyDictToJson()<CR>
 xnoremap <leader>jq :!jq -M -r --indent 4<CR>
 nnoremap <leader>jw :%!jq -M -c<CR>
 xnoremap <leader>jw :!jq -M -c<CR>
+
+function PyDictToJson()
+    :%s/None/null/ge
+    :%s/False/false/ge
+    :%s/True/true/ge
+    :%s/'/"/ge
+    :%!jq -M -r --indent 4
+endfunction
 
 nnoremap <leader>nh :noh<CR>
 
