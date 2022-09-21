@@ -158,6 +158,7 @@ nnoremap <leader>tg :Tagbar<CR>
 " Leaderf search logic
 let g:Lf_WorkingDirectoryMode = 'AF'
 let g:Lf_RootMarkers = ['.git', '.svn', '.hg', '.project', '.root']
+let g:Lf_WindowPosition = 'popup'
 
 " search files, functions, any other...
 nnoremap <leader>o :Leaderf function<CR>
@@ -313,6 +314,7 @@ xnoremap <leader>jq :!jq -M -r --indent 4<CR>
 nnoremap <leader>jw :%!jq -M -c<CR>
 xnoremap <leader>jw :!jq -M -c<CR>
 
+" convert pydict to json format
 function PyDictToJson()
     :%s/None/null/ge
     :%s/False/false/ge

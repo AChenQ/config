@@ -57,3 +57,20 @@ git reset HEAD~2
 ```
 git reset --hard HEAD~1
 ```
+
+## git合并多个历史commit
+```
+# 合并历史两个提交
+git rebase -i HEAD~2
+```
+如果有冲突，则弹出修改界面，按照提示选择前面关键字为`s`或者`d`等即可
+
+##warring提示
+
+### warning: LF will be replaced by CRLF
+问题是由于windows，linux，macos三种系统的文件换行符不一致
+windows多数编辑器会使用lf的换行，所以为了支持跨平台的情况，git在提交的时候会自动将LF换行符替换为CRLF
+配置下列命令来显示支持自动转换 
+```
+git config --global core.autocrlf true
+```
