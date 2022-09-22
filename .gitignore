@@ -130,3 +130,6 @@ dmypy.json
 
 [*]
 end_of_line = lf
+
+# self
+.self/
