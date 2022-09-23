@@ -428,4 +428,3 @@ augroup myGroup
 augroup end
 
 let g:syntastic_python_python_exec = 'python3'
-let g:python3_host_prog = "D:\\python-env\\python.exe"
