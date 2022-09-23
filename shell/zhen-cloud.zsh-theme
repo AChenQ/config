@@ -13,7 +13,7 @@ fi
 
 PROMPT='%{$fg_bold[cyan]%}$ZSH_THEME_CLOUD_PREFIX  %{$fg[white]%}%n%{$fg_bold[green]%}%p %{$fg[green]%}%~ %{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[blue]%} %{$reset_color%}'
 
-RPROMPT='%{$fg_bold[cyan]%}$ZSH_THEME_CLOCK %{$fg[white]%}%T  %{$fg[yellow]%}$(pyenv_prompt_info)'
+RPROMPT='%{$fg_bold[cyan]%}$ZSH_THEME_CLOCK %{$fg[white]%}%T  %{$fg[yellow]%}$(pyenv_prompt_info) '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"

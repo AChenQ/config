@@ -1,6 +1,6 @@
 # on-my-zsh
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="zhen-cloud"
 ZSH_PYENV_QUIET=true
 
