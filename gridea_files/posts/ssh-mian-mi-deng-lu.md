@@ -16,7 +16,7 @@ ssh-keygen -t rsa
 
 ### 2.将生成的公钥上传至服务器上
 ```
-scp -p ~/.ssh/id_rsa.pub root@<ip>:/root/.ssh/authorized_keys
+scp -p ~/.ssh/id_rsa.pub user@<ip>:~/.ssh/authorized_keys
 ```
 
 ### 3.登录服务器设置权限

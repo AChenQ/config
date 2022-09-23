@@ -85,7 +85,12 @@ oh my zsh还可以快速便捷安装非常好用的插件，这里推荐两个�
 这个插件会记录你之前输入过的历史命令，并且自动根据当前输入的前缀在历史命令中进行匹配，如果你想直接输入历史命令，按小键盘的→即可补全，类似这样：
 ![](https://achenq.github.io/post-images/1662012563595.png)
 
-安装参考：[zsh-autosuggesstions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+安装命令:
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+原地址：[zsh-autosuggesstions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 
 ### autojump
 与传统的 cd 命令相比，autojump 能够更加快速地导航至目的目录
@@ -96,5 +101,12 @@ oh my zsh还可以快速便捷安装非常好用的插件，这里推荐两个�
 
 mac安装
 
+```
 brew update
 brew install autojump
+```
+
+ubuntu 安装
+```
+apt install autojump
+```
