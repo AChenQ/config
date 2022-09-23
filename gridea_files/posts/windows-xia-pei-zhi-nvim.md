@@ -18,6 +18,8 @@ choco install neovim
 
 nvim配置文件地址: `nvim C:\Users\hjjge\AppData\Local\nvim\init.vim`
 
+运行`checkhealth`
+
 
 ## 缺少插件问题
 
@@ -43,11 +45,11 @@ au FileType markdown let g:indentLine_setConceal= 0
 参考: https://github.com/Yggdroot/indentLine/issues/349
 
 ### python找不到
-添加下列配置，设置python地址
+添加下列配置，设置python地址为python3
 ```
 let g:syntastic_python_python_exec = 'python3'
-let g:python3_host_prog = "D:\\python-env\\python.exe"
 ```
+并且安装`pip install neovim`
 
 ## coc-config
 输入 `CocConfig`， 即可打开coc的配置文件
