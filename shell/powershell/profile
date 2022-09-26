@@ -1,0 +1,34 @@
+# auto suggestions
+Import-Module PSReadLine
+Set-PSReadLineOption -PredictionSource History
+
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\amro.omp.json" | Invoke-Expression
+
+# alias
+#
+function gitStatus{
+    git status
+}
+Set-Alias gst gitStatus
+
+function LoginWinds{
+    ssh root@192.119.74.39
+}
+Set-Alias wid LoginWinds
+
+function ActiveAgent{
+    $Env:http_proxy="http://127.0.0.1:10809";$Env:https_proxy="http://127.0.0.1:10809"
+    "avtive agent to 'http://127.0.0.1:10809' successful"
+}
+Set-Alias agent ActiveAgent
+
+function DisableAgent{
+    $Env:http_proxy="";$Env:https_proxy=""
+    "unset agent successful"
+}
+Set-Alias unagent DisableAgent
+
+
+function make-link ($target, $link) {
+    New-Item -Path $link -ItemType SymbolicLink -Value $target
+}
