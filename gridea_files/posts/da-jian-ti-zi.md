@@ -13,7 +13,7 @@ isTop: false
 在搭建过程中对上列教程一些补充的点:
 
 1. 
-按照教程在服务器上安装好V2ray后，没有：发现教程有提及如何下载 `v2rayN.exe`文件
+按照教程在服务器上安装好V2ray后，没有发现教程有提及如何下载 `v2rayN.exe`文件
 可以在此链接下载 [v2rayN-Core](https://github.com/AChenQ/config/releases/download/untagged-5a42cf861f6d976bb870/v2rayN-Core.zip)
 下载后解压打开，继续流程即可
 
@@ -24,3 +24,9 @@ $Env:http_proxy="http://127.0.0.1:10809";$Env:https_proxy="http://127.0.0.1:1080
 ```
 
 点击设置可以看到V2ray是监听的`10808`端口, 然后默认情况下代理是`socks+1`，所以是`10809`
+
+3.
+生成链接二维码和url
+  * `v2ray url`  : 生成 vmess URL 链接
+  * `v2ray qr`   : 生成二维码链接
+  * `v2ray ssqr` : 生成 Shadowsocks 二维码链接

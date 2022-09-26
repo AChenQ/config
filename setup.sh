@@ -30,6 +30,7 @@ n stable
 npm install -g n
 npm install -g neovim
 
+# python setting
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | zsh
 apt install build-essential zlib1g-dev patch ruby gem ruby-dev libffi-dev tmux
 gem install neovim
