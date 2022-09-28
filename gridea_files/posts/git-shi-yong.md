@@ -42,7 +42,7 @@ git push origin develop
 git push origin --delete develop
 ```
 
-## git commit --amend取消
+## git 取消之前的commit --amend
 如果只amend了一次，则直接reset即可
 ```
 git reset HEAD~1
@@ -75,7 +75,15 @@ pick f0b7d8sdf 历史提交1
 s f7c223889 历史提交2
 ```
 
-##warring提示
+## 远程分支查看
+官方详细文档[git remote branchs](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches)
+注意在本地仓库中，远程分支有git进行管理，不能直接修改，仅能查看
+即如果你只想查看远程仓库中的某个分支的代码时，使用下面代码即可切换到对应的远程分支进行查看
+```
+git checkout origin/branchName
+```
+
+## warring提示
 
 ### warning: LF will be replaced by CRLF
 问题是由于windows，linux，macos三种系统的文件换行符不一致
