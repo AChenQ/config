@@ -1,0 +1,12 @@
+https://github.com,
+https://gas.graviti.cn,
+stackoverflow.com,
+www.google.com,
+https://pypi.org,
+https://www.python.org,
+www.vim.org,
+https://en.gravatar.com,
+https://gravatar.com,
+raw.githubusercontent.com,
+api.github.com,
+github.githubassets.com
