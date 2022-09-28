@@ -30,3 +30,9 @@ $Env:http_proxy="http://127.0.0.1:10809";$Env:https_proxy="http://127.0.0.1:1080
   * `v2ray url`  : 生成 vmess URL 链接
   * `v2ray qr`   : 生成二维码链接
   * `v2ray ssqr` : 生成 Shadowsocks 二维码链接
+
+4.PAC模式使用
+PAC模式下，需要自定义需要代理网址的名单，不在名单中的则一律不走代理
+按照下列模式添加即可
+![](https://achenq.github.io/post-images/1664189761475.png)
+
