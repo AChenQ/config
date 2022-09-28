@@ -30,7 +30,7 @@ n stable
 npm install -g n
 npm install -g neovim
 
-# python setting
+# pyenv for python version control
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | zsh
 apt install build-essential zlib1g-dev patch ruby gem ruby-dev libffi-dev tmux
 gem install neovim
@@ -38,6 +38,6 @@ pyenv install 3.9.5
 pyenv global 3.9.5
 pip install neovim
 
-git config --global user.name "zhenchen"
+git config --global user.name "AChenQ"
 git config --global user.email "cz2350276852@163.com"
 git config --global core.editor "nvim"
