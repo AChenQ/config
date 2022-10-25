@@ -207,7 +207,7 @@ let g:ale_python_mypy_options = join([
             \   '--strict-equality',
             \   '--strict',
             \])
-let g:ale_linters = {'python': ['flake8', 'pylint', 'mypy']}
+"let g:ale_linters = {'python': ['flake8', 'pylint', 'mypy']}
 let g:ale_linters_explicit = 1
 let g:ale_echo_msg_format = '[%linter%][%severity%][%code%] %s'
 let g:ale_sign_error = '?'
@@ -313,6 +313,7 @@ nnoremap <leader>jq :exec PyDictToJson()<CR>
 xnoremap <leader>jq :!jq -M -r --indent 4<CR>
 nnoremap <leader>jw :%!jq -M -c<CR>
 xnoremap <leader>jw :!jq -M -c<CR>
+nnoremap <leader>qj :exec JsonToPyDict()<CR>
 
 " convert pydict to json format
 function PyDictToJson()
@@ -321,6 +322,13 @@ function PyDictToJson()
     :%s/True/true/ge
     :%s/'/"/ge
     :%!jq -M -r --indent 4
+endfunction
+
+" convert json to pydict format
+function JsonToPyDict()
+    :%s/null/None/ge
+    :%s/false/False/ge
+    :%s/true/True/ge
 endfunction
 
 nnoremap <leader>nh :noh<CR>

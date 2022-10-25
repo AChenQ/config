@@ -36,3 +36,9 @@ PAC模式下，需要自定义需要代理网址的名单，不在名单中的�
 按照下列模式添加即可
 ![](https://achenq.github.io/post-images/1664189761475.png)
 
+5.
+ip被封如何修复
+
+使用一段时间突然发现不能访问服务器了，和客服交流后，知道可以修改ip地址，按照下列网址解决即可
+
+参考: https://www.vps234.com/hostwinds-ip-blocked-fix-isp/

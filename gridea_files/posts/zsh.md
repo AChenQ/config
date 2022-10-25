@@ -1,7 +1,7 @@
 ---
 title: 'zsh 配置'
 date: 2022-09-01 13:07:57
-tags: [zsh]
+tags: [zsh,shell]
 published: true
 hideInList: false
 feature: 

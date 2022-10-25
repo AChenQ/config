@@ -1,7 +1,7 @@
 ---
 title: 'ubuntu 装机'
 date: 2022-09-23 09:14:45
-tags: [linux]
+tags: [linux,shell]
 published: true
 hideInList: false
 feature: 
