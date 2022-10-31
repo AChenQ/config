@@ -22,10 +22,6 @@ set modifiable
 set updatetime=50
 map <leader>w :w<CR>
 
-" set markdown not collapse
-set conceallevel=0
-let g:xml_syntax_folding = 1
-
 " Color config, type highlight to see color config
 " set search color
 set hlsearch
@@ -171,6 +167,9 @@ nnoremap <leader>tr :CocCommand explorer<CR>
 " git blame
 nnoremap <leader>bl :Git blame<CR>
 
+" off/on vim-gitgutter
+nnoremap <leader>bg :GitGutterToggle<CR>
+
 " auto format
 nnoremap <leader>fo :Autoformat<CR>
 let g:autoformat_autoindent = 0
@@ -209,7 +208,7 @@ let g:ale_python_mypy_options = join([
             \])
 "let g:ale_linters = {'python': ['flake8', 'pylint', 'mypy']}
 let g:ale_linters_explicit = 1
-let g:ale_echo_msg_format = '[%linter%][%severity%][%code%] %s'
+let g:ale_echo_msg_format = '[%linter%][%severity%][%code: %] %s'
 let g:ale_sign_error = '?'
 let g:ale_sign_warning = '?'
 let g:ale_sign_info = '?'
@@ -224,6 +223,10 @@ nmap <silent> aj <Plug>(ale_next_wrap)
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_conceal_code_blocks = 0
 au FileType markdown let g:indentLine_setConceal= 0
+
+" set markdown not collapse
+set conceallevel=0
+let g:xml_syntax_folding = 1
 
 " coc-Plug
 let g:coc_global_extensions = [
