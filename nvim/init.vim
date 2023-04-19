@@ -438,4 +438,18 @@ augroup myGroup
     autocmd FileType ctrlsf call s:AutoCmdCtrlSF()
 augroup end
 
+nnoremap <leader>ca :exec CopyCurrentFile()<CR>
+
+" copy all content of current file.
+function CopyCurrentFile()
+    gg
+    0
+    v
+    G
+    $
+    y
+endfunction
+
+
+
 let g:syntastic_python_python_exec = 'python3'

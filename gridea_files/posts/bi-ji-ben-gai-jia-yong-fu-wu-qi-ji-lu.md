@@ -1,7 +1,7 @@
 ---
 title: '笔记本改家用服务器记录'
 date: 2023-02-02 13:20:50
-tags: []
+tags: [shell]
 published: true
 hideInList: false
 feature: 
